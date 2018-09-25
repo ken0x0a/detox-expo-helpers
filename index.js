@@ -42,7 +42,7 @@ const getAppHttpUrl = async () => {
 const reloadApp = async (params) => {
   let url = await getAppUrl();
   url = addUrlParams(url, params);
-
+  // console.log('addUrlParams(url, params);')
   await device.launchApp({
     permissions: params && params.permissions,
     newInstance: true,
